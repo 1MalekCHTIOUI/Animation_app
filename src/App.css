@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+:root {
+  --main-bg-color-right: rgb(255, 0, 64);
+  --main-bg-color-left: rgb(255, 0, 106);
+  --main-bg-black: black;
+  --type-color: rgb(224, 224, 224);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#blackNav {
+  background-color: var(--main-bg-black);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper-app {
+  border: 3px dashed black;
+  background-color: rgba(88, 87, 88, 0.219);
+  position: relative;
+  height: 90vh;
+}
+
+.centerContent {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+#contentContainer {
+  color: var(--type-color);
+  background-color: var(--main-bg-black);
 }
 
-.App-link {
-  color: #61dafb;
+#main {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0);
+  transition: all 3s;
+  left: 13%;
+}
+.geomitry {
+  position: relative;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  border: 10px dashed rgb(0, 0, 0);
+  background-color: rgb(0, 238, 255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sec {
+  position: absolute;
+  border-radius: 100%;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(to left, black, rgb(12, 41, 61), black);
+}
+
+.rotate {
+  animation: colorful 1s infinite;
+}
+
+@keyframes colorful {
+  0% {
+    border-color: rgb(0, 0, 0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    border-color: rgb(5, 5, 5);
+  }
+  99.9% {
+    border-color: rgb(0, 0, 0);
   }
 }
