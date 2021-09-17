@@ -2,6 +2,7 @@ window.onload = () => {
     let element = document.getElementById('main');
     let btn = document.getElementById('btn');
     let geo = document.getElementById('geo');
+    let sec = document.getElementById('sec');
     let score = document.getElementById('score');
     score.innerHTML =  0
     btn.addEventListener("click", start_animation);
@@ -10,12 +11,10 @@ window.onload = () => {
         score.innerHTML ++;
         lastAngle = +lastAngle + +360;
         e.preventDefault();
-        element.style.transform = `rotate(${lastAngle}deg)`
-        geo.classList.add("rotate")
+        geo.style.transform = `rotate(${lastAngle}deg)`
+        sec.style.transform = `rotate(${lastAngle}deg)`
+        
+        
 
-    }
-    btn.addEventListener("onmousedown", start_animations);
-    function start_animations(){
-        console.log("ss");
     }
 }

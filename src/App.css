@@ -1,7 +1,7 @@
 :root {
   --main-bg-color-right: rgb(255, 0, 64);
   --main-bg-color-left: rgb(255, 0, 106);
-  --main-bg-black: black;
+  --main-bg-black: rgb(32, 32, 32);
   --type-color: rgb(224, 224, 224);
 }
 
@@ -10,14 +10,19 @@ html {
 }
 
 #blackNav {
-  background-color: var(--main-bg-black);
+  background-color: black;
 }
-
+#scoreContainer {
+  padding: 3%;
+  background-color: rgba(245, 3, 63, 0.562);
+  height: auto;
+}
 html,
 body {
   height: 100%;
   margin: 0;
   overflow-x: hidden;
+  background-color: rgba(88, 87, 88, 0.219);
 }
 
 .wrapper-app {
@@ -25,28 +30,34 @@ body {
   background-color: rgba(88, 87, 88, 0.219);
   position: relative;
   height: 90vh;
+  width: inherit;
 }
 
 .centerContent {
   display: flex;
   justify-content: center;
+  justify-items: center;
   align-items: center;
 }
 #contentContainer {
+  padding: 0;
+  margin: 0;
+  width: 100%;
   color: var(--type-color);
   background-color: var(--main-bg-black);
 }
 
 #main {
   overflow: hidden;
-  position: absolute;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: rotate(0);
-  transition: all 3s;
-  left: 13%;
+  height: 80vh;
+}
+#main > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .geomitry {
   position: relative;
@@ -63,6 +74,12 @@ body {
   width: 250px;
   height: 250px;
   background: linear-gradient(to left, black, rgb(12, 41, 61), black);
+}
+
+#sec,
+#geo {
+  transform: rotate(0);
+  transition: all 3s;
 }
 
 .rotate {
