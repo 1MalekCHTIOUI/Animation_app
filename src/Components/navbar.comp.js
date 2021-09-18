@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -37,9 +38,9 @@ const NavBar = (props) => {
                 Options
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
-                  Rotate
-                </DropdownItem>
+                  <Link className="dropdown-item" to="/rotate">Rotate</Link>
+                  <Link className="dropdown-item" to="/degree">Degree Visualizer</Link>
+
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>

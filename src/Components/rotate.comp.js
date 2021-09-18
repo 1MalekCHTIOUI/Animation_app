@@ -1,14 +1,15 @@
 import react, {Component} from 'react'
 import { Button, Container } from 'reactstrap'
 
-import "../util/Anims"
+import {rotate} from "../util/Anims"
 
-class appInterface extends Component {
-
-    
+class Rotate extends Component {
+    componentDidMount(){
+        rotate()
+    }
     render(){
         return (
-            <Container id="contentContainer">
+            <div className="container-fluid" id="contentContainer">
                 <div id="scoreContainer">
                     <h3>Score: <h5 id="score"></h5></h3>
                 </div>
@@ -19,11 +20,11 @@ class appInterface extends Component {
                     </Container>
                     <hr />
                 </Container>
-                <Button color="primary" className="centerContent" style={{position:"relative", left:"25%", width:"50vw"}} id="btn">Go</Button>
+                <Button color="primary" className="centerContent" style={{position:"relative", left:"25%", width:"50vw", bottom:"10vh"}} id="btn">Go</Button>
 
-            </Container>
+            </div>
         )
     }
 }
 
-export default appInterface
+export default Rotate

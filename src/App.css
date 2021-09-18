@@ -20,6 +20,7 @@ html {
 html,
 body {
   height: 100%;
+  width: 100%;
   margin: 0;
   overflow-x: hidden;
   background-color: rgba(88, 87, 88, 0.219);
@@ -84,6 +85,18 @@ body {
 
 .rotate {
   animation: colorful 1s infinite;
+}
+
+#visualizer {
+  position: absolute;
+  height: 10px;
+  width: 250px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transform: rotate(0);
+  transition: all 3s;
+  background: red;
+  transform-origin: bottom left;
 }
 
 @keyframes colorful {
