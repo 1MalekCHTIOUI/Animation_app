@@ -87,9 +87,13 @@ body {
   animation: colorful 1s infinite;
 }
 
+#content {
+  position: relative;
+}
+
 #visualizer {
-  position: absolute;
-  height: 10px;
+  position: relative;
+  height: 3px;
   width: 250px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -97,6 +101,15 @@ body {
   transition: all 3s;
   background: red;
   transform-origin: bottom left;
+  z-index: 4;
+}
+
+#base {
+  z-index: 3;
+  position: absolute;
+  height: 3px;
+  width: 250px;
+  background: rgb(212, 212, 212);
 }
 
 @keyframes colorful {

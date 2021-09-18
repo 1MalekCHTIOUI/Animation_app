@@ -57,9 +57,9 @@ class DegreeVisualizer extends Component {
                     </Form>
                 </Container>
 
-                <Container className="d-flex justify-content-center" style={{paddingTop:"18rem",paddingBottom:"9rem"}}>
+                <Container id="content" className="d-flex justify-content-center" style={{paddingTop:"18rem",paddingBottom:"9rem"}}>
                     <div id="visualizer"></div>
-                <hr style={{background:"white", height:"3px",bottom: "0.5rem", width:"16rem", position:"relative"}}/>
+                    <div id="base"></div>
 
                 </Container>
             </div>
